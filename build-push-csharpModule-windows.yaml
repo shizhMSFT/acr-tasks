@@ -1,6 +1,6 @@
 version: 1.0-preview-1
 steps:
-  - build: -t {{.Run.Registry}}/csharpmodule:{{.Run.ID}} -t {{.Run.Registry}}/csharpmodule:latest -f Dockerfile.windows-amd64 .
+  - build: -t {{.Run.Registry}}/csharpmodule:{{.Run.ID}} -t {{.Run.Registry}}/csharpmodule:latest -f windowshello.dockerfile .
   - push:
     - {{.Run.Registry}}/csharpmodule:{{.Run.ID}}
     - {{.Run.Registry}}/csharpmodule:latest
