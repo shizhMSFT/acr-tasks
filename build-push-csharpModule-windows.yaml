@@ -1,6 +1,6 @@
 version: 1.0-preview-1
 steps:
-  - build: -t {{.Run.Registry}}/csharpmodule:{{.Run.ID}} -t {{.Run.Registry}}/csharpmodule:latest --platform windows/amd64/v7 -f Dockerfile.windows-amd64 .
+  - build: -t {{.Run.Registry}}/csharpmodule:{{.Run.ID}} -t {{.Run.Registry}}/csharpmodule:latest -f Dockerfile.windows-amd64 .
   - push:
     - {{.Run.Registry}}/csharpmodule:{{.Run.ID}}
     - {{.Run.Registry}}/csharpmodule:latest
