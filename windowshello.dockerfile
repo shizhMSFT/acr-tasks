@@ -1,1 +1,1 @@
-FROM docker pull winamd64/hello-world:nanoserver-1803
+FROM winamd64/hello-world:nanoserver-1803
