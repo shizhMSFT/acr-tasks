@@ -1,7 +1,0 @@
-version: 1.0-preview-1
-steps:
-  - id: nginx
-    cmd: nginx
-    detach: true
-  - build: -t curl -f curl.dockerfile .
-  - cmd: curl --url http://nginx
