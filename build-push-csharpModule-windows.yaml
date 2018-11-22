@@ -1,0 +1,6 @@
+version: 1.0-preview-1
+steps:
+  - build: -t {{.Run.Registry}}/csharpModule:{{.Run.ID}} -t {{.Run.Registry}}/csharpModule:latest -f csharpModule/Dockerfile.windows-amd64 --platform Windows/amd64 ./csharpModule
+  - push:
+    - {{.Run.Registry}}/csharpModule:{{.Run.ID}}
+    - {{.Run.Registry}}/csharpModule:latest
