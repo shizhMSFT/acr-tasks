@@ -1,6 +1,6 @@
 version: 1.0-preview-1
 steps:
-  - build: -t {{.Run.Registry}}/csharpmodule:{{.Run.ID}} -t {{.Run.Registry}}/csharpmodule:latest --platform linux/arm32/v7 -f arm32v7hello.dockerfile .
+  - build: -t {{.Run.Registry}}/csharpmodule:{{.Run.ID}} -t {{.Run.Registry}}/csharpmodule:latest --platform linux/arm32/v7 -f arm32v7hello.dockerfile --platform linux/arm32/v7 .
   - push:
     - {{.Run.Registry}}/csharpmodule:{{.Run.ID}}
     - {{.Run.Registry}}/csharpmodule:latest
